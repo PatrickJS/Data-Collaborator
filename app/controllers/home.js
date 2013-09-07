@@ -1,12 +1,10 @@
 var mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+    async = require('async'),
+    _ = require('underscore');
 
-exports.index = function(req, res){
-  Article.find(function(err, articles){
-    if(err) throw new Error(err);
-    res.render('home/index', {
-      title: 'Generator-Express MVC',
-      articles: articles
-    });
+
+exports.render = function(req, res){
+  res.render('index', {
+    user: req.user ? JSON.stringify(req.user) : "null"
   });
-};
+} ;

@@ -1,4 +1,13 @@
-extends layout
+extends layouts/default
+
+block main
+  h1 Oops something went wrong
+  br
+  span 404
 
 block content
-  h1 404 Page not found!
+  #error-message-box
+    #error-stack-trace
+      pre
+        code!= error
+
