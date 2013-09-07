@@ -1,0 +1,48 @@
+div.top-nav
+  | Top nav goes here
+
+div.main-content
+  div.create-new-visual-wrapper
+    form
+      select.api-dropdown
+        option(value="SAP Hana") SAP Hana
+        option(value="Clover") Clover
+        option(value="Github") Github
+        option(value="Twilio") Twilio
+      button(type="submit") See the visuals!
+  div.existing-visuals-wrapper
+    div.prev-visuals-list
+      div.link-wrapper
+        a.link-to-visualization-picker(href='#')
+          div.name|plant growth cluster analysis
+        div.date| 9/7/13
+        div.data-set
+          a(href="#") link to data set
+        div.description
+          | some random description of this analysis
+      div.link-wrapper
+        a.link-to-visualization-picker(href='#')
+          div.name|reddit text data cluster analysis
+        div.date| 9/7/13
+        div.data-set
+          a(href="#") link to data set
+        div.description
+          | some random description of this analysis
+      div.link-wrapper
+        a.link-to-visualization-picker(href='#')
+          div.name|distribution of In N Out locations cluster analysis
+        div.date| 9/7/13
+        div.data-set
+          a(href="#") link to data set
+        div.description
+          | some random description of this analysis
+      div.link-wrapper
+        a.link-to-visualization-picker(href='#')
+          div.name|field sports injury cluster analysis
+        div.date| 9/7/13
+        div.data-set
+          a(href="#") link to data set
+        div.description
+          | some random description of this analysis
+
+script(type="text/javascript", src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js")
