@@ -5,6 +5,9 @@ window.app.config(['$routeProvider', function($routeProvider) {
 	.when('/', {
     templateUrl: '/views/index.html'
   })
+  .when('/visualpicker', {
+    templateUrl: '/views/visual_picker.html'
+  })
 	.otherwise({
     redirectTo: '/'
   });
