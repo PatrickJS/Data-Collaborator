@@ -6261,7 +6261,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   .navbar-static-top .container,
   .navbar-fixed-top .container,
   .navbar-fixed-bottom .container {
-    width: 1170px;
+    /*width: 1170px;*/
   }
 
   /* line 593, D:/projects/admin/sass/bootstrap-original/_mixins.scss */
@@ -12440,7 +12440,7 @@ input.parsley-error {
   color: #d2d2d2;
   font-size: 12px;
   z-index: 1;
-  margin: 80px 0 0 25px;
+  margin: 25px 0 0 25px;
 }
 /* line 86, D:/projects/admin/sass/_base.scss */
 .sidebar .settings {
