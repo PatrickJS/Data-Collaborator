@@ -1,0 +1,14 @@
+.invited-users-container {
+	margin-top: 30px;
+	width: 200px;
+    border: 1px solid;
+}
+
+.add-person {
+	padding: 5px 0px 5px 15px;
+	border-bottom: 1px solid;
+}
+
+li{
+	padding-left: 15px;
+}
