@@ -8,12 +8,13 @@ window.app.config(['$routeProvider', function($routeProvider) {
   .when('/visualpicker', {
     templateUrl: '/views/visual_picker.html'
   })
-  .when('/vizpick/',{
+  .when('/vizpick',{
     templateUrl: '/views/vizpick.html',
     controller: 'VizPickController'
   })
   .when('/collaborationPage', {
-    templateUrl: '/views/collaborationPage.html'
+    templateUrl: '/views/collaborationPage.html',
+    controller: 'collaborationPageController'
   })
 	.otherwise({
     redirectTo: '/'
