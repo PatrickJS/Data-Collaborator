@@ -18,3 +18,9 @@ circle {
 text {
   font: 10px sans-serif;
 }
+
+#d3-image svg {
+	width: auto;
+	height: auto;
+	margin: auto;
+}

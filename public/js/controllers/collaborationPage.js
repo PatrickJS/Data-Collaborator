@@ -2,7 +2,7 @@ window.angular.module('pmd.controllers.collaborationPage', [])
   .controller('collaborationPageController', ['$scope',
     function($scope) {
         var bubbleData = function (){
-            var diameter = 960,
+            var diameter = $('.chart-container').width() - 13,
             format = d3.format(",d");
 
             var pack = d3.layout.pack()
