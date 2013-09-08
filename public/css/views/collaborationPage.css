@@ -86,3 +86,22 @@ svg text {
   bottom: 55px;
   left: 113px;
 }
+
+/*bar chart*/
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+  fill: steelblue;
+}
+
+.x.axis path {
+  display: none;
