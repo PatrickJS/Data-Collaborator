@@ -1,30 +1,72 @@
 .add-person {
-	padding: 5px 0px 5px 15px;
-	border-bottom: 1px solid;
+  padding: 5px 0px 5px 15px;
+  border-bottom: 1px solid;
+}
+
+#d3-image {
+  overflow: auto;
+}
+
+#d3-image svg {
+  width: auto;
+  height: auto;
+  margin: auto;
+}
+
+#LeftLeg1 circle {
+  fill: #9e0142;
+}
+#LeftLeg2 circle {
+  fill: #C5678E;
+}
+#LeftLeg3 circle {
+  fill: #E2B3C6;
+}
+#RightLeg1 circle {
+  fill: #fdae61;
+}
+#RightLeg2 circle {
+  fill: #FEC690;
+}
+#RightLeg3 circle {
+  fill: #FEE2C8;
+}
+#LeftArm1 circle {
+  fill: #e6f598;
+}
+#LeftArm2 circle {
+  fill: #F0F9C1;
+}
+#LeftArm3 circle {
+  fill: #F4FBD4;
+}
+#RightArm1 circle {
+  fill: #3288bd;
+}
+#RightArm2 circle {
+  fill: #84B8D7;
+}
+#RightArm3 circle {
+  fill: #DAEAF3;
 }
 
 circle {
-  fill: rgb(31, 119, 180);
   fill-opacity: .25;
   stroke: rgb(31, 119, 180);
   stroke-width: 1px;
 }
 
 .leaf circle {
-  fill: #ff7f0e;
+  /*fill: #C71585;*/
   fill-opacity: 1;
 }
 
-text {
-  font: 10px sans-serif;
+svg text {
+  font: 13px sans-serif;
+  fill: black;
 }
 
-#d3-image {
-	overflow: auto;
-}
-
-#d3-image svg {
-	width: auto;
-	height: auto;
-	margin: auto;
+h1 {
+  position: fixed;
+  text-align: center;
 }

@@ -5,7 +5,8 @@
 <header class="page-header">
     <div class="navbar">
         <div class="navbar-inner">
-            <ul class="nav pull-right">
+            <ul class="nav pull-right" style="margin-right:30px;">
+<!--
                 <li class="visible-phone-landscape">
                     <a href="#" id="search-toggle">
                         <i class="icon-search"></i>
@@ -29,6 +30,7 @@
                     </a>
                 </li>
                 <li class="divider"></li>
+                -->
 
                 <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="/signin"><i class="icon-signin"></i></a></li>
                 <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="/signin">Signin</a></li>
@@ -37,10 +39,10 @@
                 <li class="hidden-phone" ng-show="global.isSignedIn()"><a href="/signin">Signout</a></li>
 
             </ul>
-            <form id="search-form" class="navbar-search pull-right">
+<!--             <form id="search-form" class="navbar-search pull-right">
                 <input type="search" class="search-query" placeholder="Search...">
             </form>
-            <div class="notifications pull-right" ng-show="false">
+ -->            <div class="notifications pull-right" ng-show="false">
                 <div class="alert pull-right">
                     <a href="#" class="close" data-dismiss="alert">&times;</a>
                     <i class="icon-info-sign"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!

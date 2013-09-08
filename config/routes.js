@@ -19,7 +19,7 @@ var routes = function(app, passport, auth) {
   app.param('userId', users.user);
   app.param('visId', visualizations.vis);
 
-  app.get('/upload', s3.upload);
+  app.post('/upload', s3.upload);
 
   // Home route
   app.get('/', index.render);

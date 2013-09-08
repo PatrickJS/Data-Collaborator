@@ -3,7 +3,7 @@ window.angular.module('pmd.controllers.collaborationPage', [])
     function($scope) {
         var bubbleData = function (){
             var diameter = $('.chart-container').width() - 24,
-            format = d3.format(",d");
+                format = d3.format(",d");
 
             var pack = d3.layout.pack()
                 .size([diameter - 4, diameter - 4])
@@ -15,15 +15,16 @@ window.angular.module('pmd.controllers.collaborationPage', [])
               .append("g")
                 .attr("transform", "translate(2,2)");
 
-            d3.json("/data/BubbleData.json", function(error, root) {
+            d3.json("data/BubbleData.json", function(error, root) {
               var node = svg.datum(root).selectAll(".node")
                   .data(pack.nodes)
                 .enter().append("g")
                   .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
+                  .attr("id", function(d) { return d.name})
                   .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
               node.append("title")
-                  .text(function(d) { return d.name + (d.children ? "" : ": " + format(d.size)); });
+                  .text(function(d) { return d.name + (d.children ? "" : ": " + d.size); });
 
               node.append("circle")
                   .attr("r", function(d) { return d.r; });
@@ -36,6 +37,10 @@ window.angular.module('pmd.controllers.collaborationPage', [])
 
             d3.select(self.frameElement).style("height", diameter + "px");
         };
+        var turnOnAnnotator = function(){
+            $('.add-person').annotator();
+        }
         bubbleData();
+        turnOnAnnotator();
     }
  ]);
