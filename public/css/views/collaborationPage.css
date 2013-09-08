@@ -105,3 +105,16 @@ body {
 
 .x.axis path {
   display: none;
+}
+
+#calories-chart-notes .note1{
+  position: relative;
+  bottom: 150px;
+  left: 150px;
+}
+
+#calories-chart-notes .note2{
+  position: relative;
+  bottom: 267px;
+  left: 402px;
+}
