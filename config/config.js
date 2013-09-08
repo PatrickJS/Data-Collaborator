@@ -13,7 +13,7 @@ var path = require('path'),
 
 module.exports = {
   development: {
-    db: 'mongodb://localhost/pimp-my-data-development',
+    db: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/pimp-my-data-development',
     root: rootPath,
     notifier: notifier,
     app: {
@@ -21,7 +21,7 @@ module.exports = {
     }
   },
   test: {
-    db: 'mongodb://localhost/pimp-my-data-test',
+    db: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/pimp-my-data-test',
     root: rootPath,
     notifier: notifier,
     app: {
@@ -29,7 +29,7 @@ module.exports = {
     }
   },
   production: {
-    db: 'mongodb://localhost/pimp-my-data-production',
+    db: process.env.MONGOLAB_URI || process.env.MONGOHQ_URL || 'mongodb://localhost/pimp-my-data-production',
     root: rootPath,
     notifier: notifier,
     app: {
