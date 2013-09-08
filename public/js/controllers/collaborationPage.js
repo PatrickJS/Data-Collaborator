@@ -42,7 +42,7 @@ window.angular.module('pmd.controllers.collaborationPage', [])
         };
 
         var turnOnAnnotator = function(){
-            $('body').annotator();
+            $(document.body).annotator();
         }
 
         $scope.users = [
