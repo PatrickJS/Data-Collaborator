@@ -188,18 +188,6 @@ window.angular.module('pmd.controllers.collaborationPage', [])
             {
               name: 'CJ Winslow',
               email: 'whoaa512@gmail.com'
-            },
-            {
-              name: 'Elle Beal',
-              email: 'elle.beal@gmail.com'
-            },
-            {
-              name: 'Patrick Stapleton',
-              email: 'Patrick@gdi2290.com'
-            },
-            {
-              name: 'Rohan Sathe',
-              email: 'rohan.sathe@gmail.com'
             }
         ];
         $scope.gravatar = function(email) {
