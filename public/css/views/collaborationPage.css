@@ -8,7 +8,7 @@
 }
 
 .chart-container-wrapper {
-  margin-bottom: 50em;
+  /*margin-bottom: 50em;*/
 }
 
 .invited-users li {
@@ -144,4 +144,9 @@ body {
 
 .annotator-widget {
   min-width: 200px !important;
+}
+.collaborators {
+  position: fixed;
+  top: 79px;
+  right: 21px;
 }
