@@ -16,9 +16,19 @@ s3.upload = function(req, res, next) {
         next(err);
       }
       console.log('Images Pushed');
-      res.end(filename);
+      res.send(filename);
+      res.redirect('/');
     });
   });
+};
+
+s3.show = function(req, res, next) {
+  var name = req.params.name;
+  amazon.getObject({Bucket: 'pimpmydata',
+    Key: name}, function(err, data) {
+      if (err) next(err);
+      res.end(data.Body.toString());
+    });
 };
 
 module.exports = s3;
