@@ -8,4 +8,4 @@ var CommentsSchema = new Schema({
 });
 
 
-mongoose.model = ('Comment', CommentsSchema);
+mongoose.model('Comment', CommentsSchema);

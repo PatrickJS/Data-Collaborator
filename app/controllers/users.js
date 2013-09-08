@@ -106,4 +106,6 @@ users.user = function(req, res, next, id) {
     });
 };
 
+users.readVisualizations = function(req, res, next) {};
+
 module.exports = users;

@@ -4,6 +4,7 @@ var users = require('../app/controllers/users');
 var index = require('../app/controllers/index');
 var visualizations = require('../app/controllers/visualizations');
 var comments = require('../app/controllers/comments');
+var s3 = require('../app/controllers/s3');
 
 var routes = function(app, passport, auth) {
 
@@ -15,9 +16,10 @@ var routes = function(app, passport, auth) {
   app.post('/users/session', passport.authenticate('local', {failureRedirect: '/signin', failureFlash: 'Invalid email or password.'}), users.session);
   app.get('/users/me', users.me);
   app.get('/users/:userId', users.show);
-
   app.param('userId', users.user);
   app.param('visId', visualizations.vis);
+
+  app.get('/upload', s3.upload);
 
   // Home route
   app.get('/', index.render);
@@ -28,12 +30,12 @@ var routes = function(app, passport, auth) {
     app.get('/users/:userID/visualizations', users.readVisualizations);
 
 
-    app.post('/visualizations', visualizations.create);
+    // app.post('/visualizations', visualizations.create);
 
     // Comments
     app.get('/visualizations/:visId/comments', visualizations.readComments);
 
-    app.post('/comments', comments.create);
+    // app.post('/comments', comments.create);
 };
 
 module.exports = routes;
