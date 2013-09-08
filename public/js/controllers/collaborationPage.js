@@ -1,6 +1,6 @@
 window.angular.module('pmd.controllers.collaborationPage', [])
-  .controller('collaborationPageController', ['$scope', '$q',
-    function($scope, $q) {
+  .controller('collaborationPageController', ['$scope',
+    function($scope) {
         var bubbleData = function (){
             var diameter = 960,
             format = d3.format(",d");
