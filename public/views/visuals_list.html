@@ -1,12 +1,16 @@
 <div class="content" ng-controller='VisualsList'>
   <div class="widget">
-    <form>
-      <select class="select-block-level">
-        <option value="SAP Hana">SAP Hana</option>
-        <option value="Clover">Clover</option>
-        <option value="Github">Github</option>
-        <option value="Twilio">Twilio</option>
-      </select>
+    <h4 id='upload-response' name='upload-response'></h4>
+    <form enctype='multipart/form-data' method='POST' target=''>
+      <div class='fileupload-buttonbar'>
+        <input class='btn btn-small fileinput-button' type='file' id='upload-input'>
+        <select class="select-block-level">
+          <option value="SAP Hana">SAP Hana</option>
+          <option value="Clover">Clover</option>
+          <option value="Github">Github</option>
+          <option value="Twilio">Twilio</option>
+        </select>
+      </div>
       <button class='btn input-block-level btn-info' type="submit">See the visuals!</button>
     </form>
   </div>
