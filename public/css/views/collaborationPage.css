@@ -3,7 +3,7 @@
   border-bottom: 1px solid;
 }
 
-#d3-image {
+#d3-bubble-chart {
   overflow: auto;
 }
 
@@ -11,7 +11,7 @@
   padding-left: 15px;
 }
 
-#d3-image svg {
+#d3-bubble-chart svg {
   width: auto;
   height: auto;
   margin: auto;
@@ -70,7 +70,20 @@ svg text {
   /*fill: black;*/
 }
 
-h1 {
-  position: fixed;
-  text-align: center;
+#bubble-chart-notes .note1{
+  position: relative;
+  bottom: 375px;
+  left: 200px;
+}
+
+#bubble-chart-notes .note2{
+  position: relative;
+  bottom: 300px;
+  left: 379px;
+}
+
+#bubble-chart-notes .note3{
+  position: relative;
+  bottom: 100px;
+  left: 125px;
 }

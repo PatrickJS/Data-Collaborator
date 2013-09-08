@@ -5,14 +5,14 @@ window.angular.module('pmd.controllers.collaborationPage', [])
         $scope.bubbleData = $http.get('data/BubbleData.json');
 
         var bubbleData = function (){
-            var diameter = $('.chart-container').width() - 24,
+            var diameter = 450,
                 format = d3.format(",d");
 
             var pack = d3.layout.pack()
                 .size([diameter - 4, diameter - 4])
                 .value(function(d) { return d.size; });
 
-            var svg = d3.select("#d3-image").append("svg")
+            var svg = d3.select("#d3-bubble-chart").append("svg")
                 .attr("width", diameter)
                 .attr("height", diameter)
               .append("g")
@@ -42,7 +42,7 @@ window.angular.module('pmd.controllers.collaborationPage', [])
         };
 
         var turnOnAnnotator = function(){
-            $(document.body).annotator();
+            $('body').annotator();
         }
 
         $scope.users = [
