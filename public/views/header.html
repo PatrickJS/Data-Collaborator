@@ -28,12 +28,14 @@
                         <i class="icon-reorder"></i>
                     </a>
                 </li>
-
                 <li class="divider"></li>
-                <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="login.html"><i class="icon-signin"></i></a></li>
-                <li class="hidden-phone"><a href="/signin">Signin</a></li>
 
-                <li class="hidden-phone" ng-show="global.isSignedIn()"><a href="login.html"><i class="icon-signout"></i></a></li>
+                <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="/signin"><i class="icon-signin"></i></a></li>
+                <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="/signin">Signin</a></li>
+
+                <li class="hidden-phone" ng-show="global.isSignedIn()"><a href="/signout"><i class="icon-signout"></i></a></li>
+                <li class="hidden-phone" ng-show="global.isSignedIn()"><a href="/signin">Signout</a></li>
+
             </ul>
             <form id="search-form" class="navbar-search pull-right">
                 <input type="search" class="search-query" placeholder="Search...">

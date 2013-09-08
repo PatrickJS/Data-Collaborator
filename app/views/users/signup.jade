@@ -1,25 +1,45 @@
 extends auth
 
 block auth
-  form(action="/users", method="post")
-    .control-group
-      label(for='name') Full name
-      input#name(type='text', name="name", placeholder='Full name', value=user.name)
-
-    .control-group
-      label(for='email') Email
-      input#email(type='text', name="email", placeholder='Email', value=user.email)
-
-    .control-group
-      label(for='username') Username
-      input#username(type='text', name="username", placeholder='Username', value=user.username)
-
-    .control-group
-      label(for='password') Password
-      input#password(type='password', name="password", placeholder='Password')
-
-    .control-group
-      button.btn.btn-primary(type='submit') Sign up
-      &nbsp;
-      | or&nbsp;
-      a.show-login(href="/signin") login
+  .single-widget-container
+      section.widget.login-widget
+          header.text-align-center
+            h4 Create an Account
+          .body
+            form.no-margin(action="/users", method="post")
+              fieldset
+                .control-group.no-margin
+                  label.control-label(for='name') Full name
+                  .control
+                    .input-prepend.input-padding-increased
+                      span.add-on
+                        i.eicon-user.icon-large
+                      input#name(type='text', name="name", placeholder='Full name', value=user.name)
+                .control-group.no-margin
+                  label.control-label(for='email') Email
+                  .control
+                    .input-prepend.input-padding-increased
+                      span.add-on
+                        i.eicon-user.icon-large
+                      input#email(type='text', name="email", placeholder='Email', value=user.email)
+                .control-group.no-margin
+                  label.control-label(for='username') Username
+                  .control
+                    .input-prepend.input-padding-increased
+                      span.add-on
+                        i.eicon-user.icon-large
+                      input#username(type='text', name="username", placeholder='Username', value=user.username)
+                .control-group.no-margin
+                  label.control-label(for='password') Password
+                  .control
+                    .input-prepend.input-padding-increased
+                      span.add-on
+                        i.icon-lock.icon-large
+                      input#password(type='password', name="password", placeholder='Password')
+              .form-actions
+                button.btn.btn-block.btn-large.btn-danger(type='submit')
+                  span.small-circle
+                    i.icon-caret-right
+                  small Sign up
+                .forgot
+                  a.forgot(href='#') Forgot Username or Password?

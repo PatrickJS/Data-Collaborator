@@ -2,6 +2,6 @@
 html(lang='en', xmlns='http://www.w3.org/1999/xhtml', xmlns:fb='https://www.facebook.com/2008/fbml', itemscope='itemscope', itemtype='http://schema.org/Product')
   include ../includes/head
   body
-    div(data-ng-include="'views/header.html'")
+    div(data-ng-include="'views/header.html'", data-ng-controller="HeaderController")
     block content
     include ../includes/foot
