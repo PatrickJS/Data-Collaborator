@@ -12,16 +12,17 @@
                               <input type="file" name="files[]" multiple="">
                             </span>
                         </div>
-                        <select class='span12'>
+
+                        <div class="fileupload-loading"><i class="icon-spin icon-spinner"></i></div>
+                        <!-- The table listing the files available for upload/download -->
+                        <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
+                        <button type="button" class ="btn btn-primary btn-large start" ng-click="launchModal('/views/vizpick.html')">Viz Type</button>
+                                                <select class="btn dropdown-toggle">
                           <option value=''>Bubble Diagram</option>
                           <option value=''>FitBit 1</option>
                           <option value=''>FitBit 2</option>
                           <option value=''>FitBit 3</option>
                         </select>
-                        <div class="fileupload-loading"><i class="icon-spin icon-spinner"></i></div>
-                        <!-- The table listing the files available for upload/download -->
-                        <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
-                        <button type="button" class ="btn btn-primary btn-large start" ng-click="launchModal('/views/vizpick.html')">Viz Type</button>
                         <button type="submit" class="btn btn-success btn-large start pull-right">
                           <i class="icon-upload"></i>
                           <span>Start upload</span>

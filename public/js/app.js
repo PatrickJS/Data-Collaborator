@@ -8,7 +8,8 @@ window.app =
     /*'restangular',*/
     'pmd.controllers',
     'pmd.directives',
-    'pmd.services'
+    'pmd.services',
+    'blueimp.fileupload'
   ]);
 
 // bundling dependencies
