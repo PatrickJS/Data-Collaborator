@@ -2,8 +2,19 @@
 window.app.config(['$routeProvider', function($routeProvider) {
 
 	$routeProvider
-	.when('/', {
+  .when('/', {
     templateUrl: '/views/index.html'
+  })
+  .when('/visualslist', {
+    templateUrl: '/views/visuals_list.html'
+  })
+  .when('/vizpick',{
+    templateUrl: '/views/vizpick.html',
+    controller: 'VizPickController'
+  })
+  .when('/collaborationPage', {
+    templateUrl: '/views/collaborationPage.html',
+    controller: 'collaborationPageController'
   })
 	.otherwise({
     redirectTo: '/'

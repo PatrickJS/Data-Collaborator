@@ -1,20 +1,51 @@
-<div class="navbar-inner" ng-controller="HeaderController">
-	<ul class="nav">
-		<li><a class="brand" href="/">Pimp my Data</a></li>
-	</ul>
-	<ul class="nav pull-right" ng-hide="global.isSignedIn()">
-		<li><a href="signup">Signup</a></li>
-		<li class="divider-vertical"></li>
-		<li><a href="signin">Signin</a></li>
-	</ul>
-	<ul class="nav pull-right" ng-show="global.isSignedIn()">
-		<li class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				{{ global.currentUser().name }} <b class="caret"></b>
-			</a>
-			<ul class="dropdown-menu">
-				<li ><a href="/signout">Signout</a></li>
-			</ul>
-		</li>
-	</ul>
+<div class="logo">
+    <h4><i class="icon-tasks"></i> <a href="/">Data <strong>Collaborator</strong></a></h4>
 </div>
+
+<header class="page-header">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav pull-right">
+                <li class="visible-phone-landscape">
+                    <a href="#" id="search-toggle">
+                        <i class="icon-search"></i>
+                    </a>
+                </li>
+                <li class="hidden-phone">
+                    <a href="/settings" id="settings"
+                       title="Settings"
+                       data-toggle="popover"
+                       data-placement="bottom">
+                        <i class="icon-cog"></i>
+                    </a>
+                </li>
+                <li class="visible-phone">
+                    <a href="#"
+                       class="btn-navbar"
+                       data-toggle="collapse"
+                       data-target=".sidebar"
+                       title="">
+                        <i class="icon-reorder"></i>
+                    </a>
+                </li>
+                <li class="divider"></li>
+
+                <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="/signin"><i class="icon-signin"></i></a></li>
+                <li class="hidden-phone" ng-hide="global.isSignedIn()"><a href="/signin">Signin</a></li>
+
+                <li class="hidden-phone" ng-show="global.isSignedIn()"><a href="/signout"><i class="icon-signout"></i></a></li>
+                <li class="hidden-phone" ng-show="global.isSignedIn()"><a href="/signin">Signout</a></li>
+
+            </ul>
+            <form id="search-form" class="navbar-search pull-right">
+                <input type="search" class="search-query" placeholder="Search...">
+            </form>
+            <div class="notifications pull-right" ng-show="false">
+                <div class="alert pull-right">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    <i class="icon-info-sign"></i> Check out Light Blue <a id="notification-link" href="#">settings</a> on the right!
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

@@ -13,7 +13,9 @@ window.app =
 // bundling dependencies
 window.angular.module('pmd.controllers', [
   'pmd.controllers.header',
-  'pmd.controllers.index'
+  'pmd.controllers.index',
+  'pmd.controllers.vizpick',
+  'pmd.controllers.collaborationPage'
 ]);
 window.angular.module('pmd.services', [
   'pmd.services.global'

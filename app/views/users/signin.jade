@@ -1,18 +1,31 @@
 extends auth
 
 block auth
-  form(action="/users/session", method="post")
-    p.error= message
-    .control-group
-      label(for='email') Email
-      input#email(type='text', name="email", placeholder='Email')
-
-    .control-group
-      label(for='password') Password
-      input#password(type='password', name="password", placeholder='Password')
-
-    .control-group
-      button.btn.btn-primary(type='submit') Sign in
-      &nbsp;
-      | or&nbsp;
-      a.show-signup(href="/signup") Sign up
+  .single-widget-container
+      section.widget.login-widget
+          header.text-align-center
+            h4 Login to your account
+          .body
+            form.no-margin(action="/users/session", method="post")
+              fieldset
+                .control-group.no-margin
+                  label.control-label(for='email') Email
+                  .control
+                    .input-prepend.input-padding-increased
+                      span.add-on
+                        i.eicon-user.icon-large
+                      input#email(type='email', name="email", placeholder='Your Email')
+                .control-group
+                  label.control-label(for='password') Password
+                  .control
+                    .input-prepend.input-padding-increased
+                      span.add-on
+                        i.icon-lock.icon-large
+                      input#password(type='password', name="password", placeholder='Your Password')
+              .form-actions
+                button.btn.btn-block.btn-large.btn-danger(type='submit')
+                  span.small-circle
+                    i.icon-caret-right
+                  small Sign In
+                .forgot
+                  a.forgot(href='#') Forgot Username or Password?
