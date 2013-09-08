@@ -16,7 +16,6 @@ window.angular.module('pmd.controllers.vizpick', [])
             height = 400,
             innerRadius = Math.min(width, height) * .41,
             outerRadius = innerRadius * 1.1;
-        console.log(width)
 
         var fill = d3.scale.ordinal()
             .domain(d3.range(4))
@@ -92,5 +91,42 @@ window.angular.module('pmd.controllers.vizpick', [])
         }
       }
       creatChord();
+      var bubbleData = function (){
+        var diameter = $('.bubble-graph').width(),
+        height = 400,
+        format = d3.format(",d");
+
+        var pack = d3.layout.pack()
+            .size([diameter - 4, height - 4])
+            .value(function(d) { return d.size; });
+
+        var svg = d3.select(".bubble-graph").append("svg")
+            .attr("width", diameter)
+            .attr("height", height)
+          .append("g")
+            .attr("transform", "translate(2,2)");
+
+        d3.json("/data/BubbleData.json", function(error, root) {
+          var node = svg.datum(root).selectAll(".node")
+              .data(pack.nodes)
+            .enter().append("g")
+              .attr("class", function(d) { return d.children ? "node" : "leaf node"; })
+              .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+
+          node.append("title")
+              .text(function(d) { return d.name + (d.children ? "" : ": " + format(d.size)); });
+
+          node.append("circle")
+              .attr("r", function(d) { return d.r; });
+
+          node.filter(function(d) { return !d.children; }).append("text")
+              .attr("dy", ".3em")
+              .style("text-anchor", "middle")
+              .text(function(d) { return d.name.substring(0, d.r / 3); });
+        });
+
+        d3.select(self.frameElement).style("height", diameter + "px");
+      };
+      bubbleData();
   }
 ]);
