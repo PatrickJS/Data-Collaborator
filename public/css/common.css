@@ -12289,7 +12289,6 @@ form {
   left: 1.6%;
   padding-left: 5px;
   width: 40px;
-  top: 13px;
 }
 
 /* line 6, D:/projects/admin/sass/_base.scss */
@@ -12408,7 +12407,6 @@ input.parsley-error {
 .logo {
   position: absolute;
   left: 65px;
-  top: 13px;
   z-index: 1;
 }
 /* line 58, D:/projects/admin/sass/_base.scss */
@@ -14986,7 +14984,6 @@ table.table thead .sorting_desc_disabled {
   .logo {
     left: 1.6%;
     padding-left: 5px;
-    top: 13px;
   }
 
   /* line 234, D:/projects/admin/sass/_variables.scss */
@@ -15014,7 +15011,6 @@ table.table thead .sorting_desc_disabled {
     right: 1.6%;
     padding-right: 2px;
     width: 40px;
-    top: 13px;
   }
 
   /* line 105, D:/projects/admin/sass/_responsive.scss */

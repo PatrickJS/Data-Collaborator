@@ -1,6 +1,6 @@
 window.angular.module('pmd.controllers.collaborationPage', [])
-  .controller('collaborationPageController', ['$scope', '$http', 'dataType', 'md5',
-    function($scope, $http, dataType, md5) {
+  .controller('collaborationPageController', ['$scope', '$http', 'dataType', 'md5', 'Global',
+    function($scope, $http, dataType, md5, Global) {
 
         $scope.bubbleD3 = $http.get('data/BubbleData.json');
         $scope.caloriesD3 = $http.get('data/Calories.csv');
@@ -213,6 +213,7 @@ window.angular.module('pmd.controllers.collaborationPage', [])
               email: $scope.newPersonEmail
             });
             $scope.newPersonName = "";
+            $scope.newPersonEmail = "";
           }
         };
 
