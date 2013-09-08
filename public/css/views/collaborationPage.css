@@ -107,6 +107,7 @@ body {
   display: none;
 }
 
+/*calorie chart*/
 #calories-chart-notes .note1{
   position: relative;
   bottom: 150px;
@@ -116,5 +117,18 @@ body {
 #calories-chart-notes .note2{
   position: relative;
   bottom: 267px;
-  left: 402px;
+  left: 350px;
+}
+
+/*step chart*/
+#steps-chart-notes .note1{
+  position: relative;
+  bottom: 150px;
+  left: 150px;
+}
+
+#steps-chart-notes .note2{
+  position: relative;
+  bottom: 267px;
+  left: 350px;
 }
