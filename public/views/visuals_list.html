@@ -3,7 +3,7 @@
         <div class="span7">
             <section class="widget">
                 <div class="body">
-                  <h2 class="page-title"><i class="icon-download-alt pull-left"></i> Fileupload <small>Drag & drop fileupload</small></h2>
+                  <h2 class="page-title"><i class="icon-download-alt pull-left"></i> Fileupload</h2>
                     <form enctype='multipart/form-data' method='POST' action='/upload' target='upload-response'>
                         <div class="form-actions fileupload-buttonbar no-margin">
                             <span class="btn btn-small fileinput-button">
@@ -15,14 +15,17 @@
                         <div class="fileupload-loading"><i class="icon-spin icon-spinner"></i></div>
                         <!-- The table listing the files available for upload/download -->
                         <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
-                        <input type='submit' value='See DA VISUALSz!'/>
+                        <button type="submit" class="btn btn-primary btn-small start">
+                          <i class="icon-upload"></i>
+                          <span>Start upload</span>
+                        </button>
                     </form>
                 </div>
             </section>
 
         </div>
         <div class="span5">
-          <div class="widget text-align-center">
+          <div class="widget">
             <div class="prev-visuals-list">
               <h2 class="page-title">Previously Created Visualizations</h2>
               <div class="link-wrapper"><a href="#" class="link-to-visualization-picker">
