@@ -2,7 +2,7 @@
     <h4 class="row-fluid">Pick a vizulization type:</h4>
     <span ng-repeat="viz in vizs" class="row-fluid">
       <span class="span8 offset2">
-        <button type="button" class="btn btn-success btn-block btn-large" data-placement="top">{{viz}} </button>
+        <button type="button" class="btn btn-success btn-block btn-large" data-placement="top" ng-click="$modalCancel()">{{viz}} </button>
       </span>
     </span>
 </div>
