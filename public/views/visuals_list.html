@@ -15,17 +15,17 @@
 
 
                         <select name="dataType" class="select-block-level btn selectpicker">
-                          <option selected="selected">Select a Visualization Type</option>
+                          <option selected="selected">Select a API Type</option>
                           <option value='Bubble Diagram'>Bubble Diagram</option>
-                          <option value='Line Chart'>Line Chart</option>
-                          <option value='Bar Chart'>Bar Chart</option>
-                          <option value='Scatter Graph'>Scatter Graph</option>
+                          <option value='Fitbit 1'>Fitbit 1</option>
+                          <option value='Fitbit 2'>Fitbit 2</option>
+                          <option value='Fitbit 3'>Fitbit 3</option>
                         </select>
 
                         <div class="fileupload-loading"><i class="icon-spin icon-spinner"></i></div>
                         <!-- The table listing the files available for upload/download -->
                         <table role="presentation" class="table table-striped"><tbody class="files" data-toggle="modal-gallery" data-target="#modal-gallery"></tbody></table>
-                        <button type="button" class ="btn btn-primary btn-large start" ng-click="launchModal('/views/vizpick.html')">Viz Type</button>
+                        <button type="button" class ="btn btn-primary btn-large start" ng-click="launchModal('/views/vizpick.html')">Graph Type</button>
                         <button type="submit" class="btn btn-success btn-large start pull-right">
                           <i class="icon-upload"></i>
                           <span>Start upload</span>
