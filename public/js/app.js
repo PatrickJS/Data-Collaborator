@@ -19,5 +19,6 @@ window.angular.module('pmd.controllers', [
   'pmd.controllers.collaborationPage'
 ]);
 window.angular.module('pmd.services', [
-  'pmd.services.global'
+  'pmd.services.global',
+  'fundoo.services'
 ]);

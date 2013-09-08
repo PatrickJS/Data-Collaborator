@@ -31,11 +31,11 @@ angular.module('fundoo.services', []).factory('createDialog', ["$document", "$co
 
       var key;
       var idAttr = options.id ? ' id="' + options.id + '" ' : '';
-      var defaultFooter = '<button class="pure-button" ng-click="$modalCancel()">Close</button>' +
-        '<button class="pure-button" ng-click="$modalSuccess()">{{$modalSuccessLabel}}</button>';
-      var footerTemplate = '<div class="modal-footer">' +
-        (options.footerTemplate || defaultFooter) +
-        '</div>';
+      // var defaultFooter = '<button class="pure-button" ng-click="$modalCancel()">Close</button>' +
+      //   '<button class="pure-button" ng-click="$modalSuccess()">{{$modalSuccessLabel}}</button>';
+      // var footerTemplate = '<div class="modal-footer">' +
+      //   (options.footerTemplate || defaultFooter) +
+      //   '</div>';
       var modalBody = (function(){
         if(options.template){
           if(angular.isString(options.template)){
@@ -58,7 +58,7 @@ angular.module('fundoo.services', []).factory('createDialog', ["$document", "$co
           '    <h2>{{$title}}</h2>' +
           '  </div>' +
           modalBody +
-          footerTemplate +
+          // footerTemplate +
           '</div>');
 
       for(key in options.css) {
