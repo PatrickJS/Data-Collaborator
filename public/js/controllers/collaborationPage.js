@@ -1,6 +1,9 @@
 window.angular.module('pmd.controllers.collaborationPage', [])
-  .controller('collaborationPageController', ['$scope',
-    function($scope) {
+  .controller('collaborationPageController', ['$scope', '$http',
+    function($scope, $http) {
+
+        $scope.bubbleData = $http.get('data/BubbleData.json');
+
         var bubbleData = function (){
             var diameter = $('.chart-container').width() - 24,
                 format = d3.format(",d");
