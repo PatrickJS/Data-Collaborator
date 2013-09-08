@@ -1,18 +1,18 @@
-<div class="top-nav">Top nav goes here</div>
-<div class="main-content">
-  <div class="create-new-visual-wrapper">
+<div class="content" ng-controller='VisualsList'>
+  <div class="widget">
     <form>
-      <select class="api-dropdown">
+      <select class="select-block-level">
         <option value="SAP Hana">SAP Hana</option>
         <option value="Clover">Clover</option>
         <option value="Github">Github</option>
         <option value="Twilio">Twilio</option>
       </select>
-      <button type="submit">See the visuals!</button>
+      <button class='btn input-block-level btn-info' type="submit">See the visuals!</button>
     </form>
   </div>
-  <div class="existing-visuals-wrapper">
+  <div class="widget text-align-center">
     <div class="prev-visuals-list">
+      <h3>Previously Created Visualizations</h3>
       <div class="link-wrapper"><a href="#" class="link-to-visualization-picker">
           <div class="name">plant growth cluster analysis</div></a>
         <div class="date">9/7/13</div>
