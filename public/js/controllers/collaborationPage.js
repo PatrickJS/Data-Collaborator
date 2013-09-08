@@ -40,9 +40,29 @@ window.angular.module('pmd.controllers.collaborationPage', [])
 
             d3.select(self.frameElement).style("height", diameter + "px");
         };
+
         var turnOnAnnotator = function(){
-            $('.add-person').annotator();
+            $('body').annotator();
         }
+
+        $scope.users = [
+            'Alice',
+            'Bill',
+            'CJ',
+            'Elle',
+            'Patrick',
+            'Rohan'
+        ];
+
+        $scope.addFriend = function() {
+
+            $scope.users.push( $scope.newPersonName );
+
+            $scope.newPersonName = "";
+
+        };
+
+
         bubbleData();
         turnOnAnnotator();
     }
