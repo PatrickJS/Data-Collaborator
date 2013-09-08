@@ -24,11 +24,12 @@ var routes = function(app, passport, auth) {
   // Home route
   app.get('/', index.render);
 
-  // Rest API
+  // API
 
     // Visualization
     app.get('/users/:userID/visualizations', users.readVisualizations);
 
+    app.get('/data/:name', s3.show);
 
     // app.post('/visualizations', visualizations.create);
 
