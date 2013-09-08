@@ -18,40 +18,40 @@
 }
 
 #LeftLeg1 circle {
-  fill: #9e0142;
+  fill: #16a085;
 }
 #LeftLeg2 circle {
-  fill: #C5678E;
+  fill: #27ae60;
 }
 #LeftLeg3 circle {
-  fill: #E2B3C6;
+  fill: #2980b9;
 }
 #RightLeg1 circle {
-  fill: #fdae61;
+  fill: #8e44ad;
 }
 #RightLeg2 circle {
-  fill: #FEC690;
+  fill: #2c3e50;
 }
 #RightLeg3 circle {
-  fill: #FEE2C8;
+  fill: #f39c12;
 }
 #LeftArm1 circle {
-  fill: #e6f598;
+  fill: #d35400;
 }
 #LeftArm2 circle {
-  fill: #F0F9C1;
+  fill: #9b59b6;
 }
 #LeftArm3 circle {
-  fill: #F4FBD4;
+  fill: #bdc3c7;
 }
 #RightArm1 circle {
-  fill: #3288bd;
+  fill: #e67e22;
 }
 #RightArm2 circle {
-  fill: #84B8D7;
+  fill: #3498db;
 }
 #RightArm3 circle {
-  fill: #DAEAF3;
+  fill: #f1c40f;
 }
 
 circle {
@@ -66,8 +66,8 @@ circle {
 }
 
 svg text {
-  font: 13px sans-serif;
-  fill: black;
+  font: 10px sans-serif;
+  /*fill: black;*/
 }
 
 h1 {
