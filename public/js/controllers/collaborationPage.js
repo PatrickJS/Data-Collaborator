@@ -3,4 +3,4 @@ window.angular.module('pmd.controllers.collaborationPage', [])
     function() {
 
     }
-  ]);
+ ]);
