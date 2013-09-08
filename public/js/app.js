@@ -4,6 +4,7 @@ window.app =
     'ngResource',
     'ui.bootstrap',
     'ngRoute',
+    'mousetrap',
     /*'restangular',*/
     'pmd.controllers',
     'pmd.directives',

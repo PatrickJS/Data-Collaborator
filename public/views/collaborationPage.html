@@ -1,19 +1,20 @@
 <section class="content container-fluid">
     <div class="widget">
-        <div id="d3-image" class="chart-container"></div>
-    </div>
-    <div class="invited-users-container widget">
-        <div class="add-person">
-            <i class='icon-plus'></i>
-            <span>Add Person</span>
+        <div class='row-fluid'>
+            <div class='tabbable tabs-left'>
+                <div class='tab-content'>
+                    <div id="d3-image" class="chart-container"></div>
+                </div>
+                <div class="invited-users-container">
+                    <ul class="invited-users nav nav-tabs">
+                        <li ng-repeat='user in users'>{{user}}</li>
+                    </ul>
+                    <form ng-submit='addFriend()'>
+                        <input type='text' ng-model="newPersonName" placeholder='New_collaborator@example.com' />
+                        <button type='submit' class="add-person"><i class='icon-plus'></i></button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <ul class="invited-users">
-            <li>Alex</li>
-            <li>Elle</li>
-            <li>Patrick</li>
-            <li>CJ</li>
-            <li>Bill</li>
-            <li>Rohan</li>
-        </ul>
     </div>
 </section>

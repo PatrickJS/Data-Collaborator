@@ -7,6 +7,10 @@
   overflow: auto;
 }
 
+.invited-users li {
+  padding-left: 15px;
+}
+
 #d3-image svg {
   width: auto;
   height: auto;

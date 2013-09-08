@@ -1,6 +1,9 @@
 window.angular.module('pmd.controllers.collaborationPage', [])
-  .controller('collaborationPageController', ['$scope',
-    function($scope) {
+  .controller('collaborationPageController', ['$scope', '$http',
+    function($scope, $http) {
+
+        $scope.bubbleData = $http.get('data/BubbleData.json');
+
         var bubbleData = function (){
             var diameter = $('.chart-container').width() - 24,
                 format = d3.format(",d");
@@ -37,9 +40,29 @@ window.angular.module('pmd.controllers.collaborationPage', [])
 
             d3.select(self.frameElement).style("height", diameter + "px");
         };
+
         var turnOnAnnotator = function(){
-            $('.add-person').annotator();
+            $('body').annotator();
         }
+
+        $scope.users = [
+            'Alice',
+            'Bill',
+            'CJ',
+            'Elle',
+            'Patrick',
+            'Rohan'
+        ];
+
+        $scope.addFriend = function() {
+
+            $scope.users.push( $scope.newPersonName );
+
+            $scope.newPersonName = "";
+
+        };
+
+
         bubbleData();
         turnOnAnnotator();
     }
