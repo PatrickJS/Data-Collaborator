@@ -5,6 +5,9 @@ window.app.config(['$routeProvider', function($routeProvider) {
   .when('/', {
     templateUrl: '/views/index.html'
   })
+  .when('/settings', {
+    templateUrl: '/views/index.html'
+  })
   .when('/visualslist', {
     templateUrl: '/views/visuals_list.html',
     controller: 'VisualsListController'
