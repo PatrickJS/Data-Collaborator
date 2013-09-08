@@ -68,11 +68,16 @@ svg text {
   font: 10px sans-serif;
   /*fill: black;*/
 }
+#bubble-chart-notes .note0{
+  position: relative;
+  bottom: 377px;
+  left: 55px;
+}
 
 #bubble-chart-notes .note1{
   position: relative;
   bottom: 394px;
-  left: 246px;
+  left: 299px;
 }
 
 #bubble-chart-notes .note2{
@@ -131,4 +136,8 @@ body {
   position: relative;
   bottom: 267px;
   left: 350px;
+}
+
+.annotator-widget {
+  min-width: 200px !important;
 }
