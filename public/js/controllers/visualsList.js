@@ -1,7 +1,9 @@
 window.angular.module('pmd.controllers.visualsList', [])
   .controller('VisualsListController', [ '$scope', 'Global', 'createDialog', '$http',
-    function($scope, Global, createDialog, $http) {
-      var state
+    function($scope, Global, createDialog, $http, dataType) {
+      $scope.global = Global;
+
+      var state;
       // $scope.file
       // if ($scope.file.url) {
       //     $scope.file.$state = function () {
@@ -36,7 +38,7 @@ window.angular.module('pmd.controllers.visualsList', [])
           modalClass : ['modal']
         });
       };
-        $scope.vizs = ["Bubble Diagram", "Line Chart", "Bar Chart", "Scatter Graph"];
+      $scope.vizs = ["Bubble Diagram", "Line Chart", "Bar Chart", "Scatter Graph"];
 
     }
   ]);

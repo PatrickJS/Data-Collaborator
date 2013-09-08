@@ -1,6 +1,7 @@
 <section class="content container-fluid">
   <div class="row-fluid">
     <div class="widget span8">
+    <h2 class="page-title"><i class="icon-bar-chart pull-left"></i> Charts</h2>
       <div id="d3-bubble-chart" class="chart-container"></div>
       <div id="bubble-chart-notes">
           <div class="note1 annotator-outer annotator-viewer">
@@ -90,19 +91,26 @@
     </div>
     <div class='widget span4'>
       <div class="invited-users-container">
+      <h2 class="page-title"><i class="icon-group pull-left"></i> Collaborators</h2>
         <ul class="users-list">
-          <li ng-repeat='user in users'>{{user}}</li>
+          <li ng-repeat='user in users'><h4><img src="http://www.gravatar.com/avatar/{{ gravatar(user.email) }}" style="border-radius:100%"> {{ user.name }}</h4></li>
         </ul>
-        <fieldset ng-submit='addFriend()'>
+        <br>
+        <br>
+        <form ng-submit='addFriend()'>
           <div class="control-group">
             <div class="row-group">
               <div class="input-append">
-                <input class="span8" type='text' ng-model="newPersonName" placeholder='New_collaborator@example.com' />
-                <button type='submit' class="btn btn-success"><i class='icon-plus'></i></button>
+              <label for="newPersonName">Name</label>
+                <input class="span12" type='text' tabindex="1" ng-model="newPersonName" placeholder='Collaborator' value="" id="newPersonName" />
+              <label for="newPersonName">Email</label>
+                <input class="span12" type='text' tabindex="2" ng-model="newPersonEmail" placeholder='collaborator@example.com' value="" id="newPersonEmail" />
+                <br>
+                <button type='submit' class="btn btn-success">Add Collaborators  &nbsp;<i class='icon-plus'></i></button>
               </div>
             </div>
           </div>
-        </fieldset>
+        </form>
       </div>
     </div>
   </div>

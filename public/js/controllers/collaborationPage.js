@@ -1,6 +1,6 @@
 window.angular.module('pmd.controllers.collaborationPage', [])
-  .controller('collaborationPageController', ['$scope', '$http',
-    function($scope, $http) {
+  .controller('collaborationPageController', ['$scope', '$http', 'dataType', 'md5',
+    function($scope, $http, dataType, md5) {
 
         $scope.bubbleD3 = $http.get('data/BubbleData.json');
         $scope.caloriesD3 = $http.get('data/Calories.csv');
@@ -177,17 +177,43 @@ window.angular.module('pmd.controllers.collaborationPage', [])
         }
 
         $scope.users = [
-            'Alex',
-            'Bill',
-            'CJ',
-            'Elle',
-            'Patrick',
-            'Rohan'
+            {
+              name: 'Alex Gaputin',
+              email: 'googamanga@gmail.com'
+            },
+            {
+              name: 'Bill Shelton',
+              email: 'sheltowt@gmail.com'
+            },
+            {
+              name: 'CJ Winslow',
+              email: 'whoaa512@gmail.com'
+            },
+            {
+              name: 'Elle Beal',
+              email: 'elle.beal@gmail.com'
+            },
+            {
+              name: 'Patrick Stapleton',
+              email: 'Patrick@gdi2290.com'
+            },
+            {
+              name: 'Rohan Sathe',
+              email: 'rohan.sathe@gmail.com'
+            }
         ];
+        $scope.gravatar = function(email) {
+          return md5.createHash(email.toLowerCase());
+        }
 
         $scope.addFriend = function() {
-            $scope.users.push( $scope.newPersonName );
+          if ($scope.newPersonName != '') {
+            $scope.users.push({
+              name: $scope.newPersonName,
+              email: $scope.newPersonEmail
+            });
             $scope.newPersonName = "";
+          }
         };
 
         turnOnAnnotator();

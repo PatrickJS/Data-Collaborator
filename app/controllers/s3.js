@@ -17,7 +17,7 @@ s3.upload = function(req, res, next) {
       }
       console.log('Images Pushed');
       res.send(filename);
-      res.redirect('/');
+      res.redirect('/#!/collaborationPage');
     });
   });
 };
