@@ -1,20 +1,24 @@
 <section class="content container-fluid">
-    <div class="widget">
-        <div class='row-fluid'>
-            <div class='tabbable tabs-left'>
-                <div class='tab-content'>
-                    <div id="d3-image" class="chart-container"></div>
-                </div>
-                <div class="invited-users-container">
-                    <ul class="invited-users nav nav-tabs">
-                        <li ng-repeat='user in users'>{{user}}</li>
-                    </ul>
-                    <form ng-submit='addFriend()'>
-                        <input type='text' ng-model="newPersonName" placeholder='New_collaborator@example.com' />
-                        <button type='submit' class="add-person"><i class='icon-plus'></i></button>
-                    </form>
-                </div>
-            </div>
-        </div>
+  <div class="row-fluid">
+    <div class="widget span8">
+      <div id="d3-image" class="chart-container"></div>
     </div>
+    <div class='widget span4'>
+      <div class="invited-users-container">
+          <ul class="users-list">
+              <li ng-repeat='user in users'>{{user}}</li>
+          </ul>
+          <fieldset ng-submit='addFriend()'>
+            <div class="control-group">
+              <div class="row-group">
+                <div class="input-append">
+                  <input class="span8" type='text' ng-model="newPersonName" placeholder='New_collaborator@example.com' />
+                  <button type='submit' class="btn btn-success"><i class='icon-plus'></i></button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+      </div>
+    </div>
+  </div>
 </section>
