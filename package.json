@@ -26,7 +26,8 @@
     "view-helpers": "latest",
     "forever": "latest",
     "mean-logger": "latest",
-    "bower": "latest"
+    "bower": "latest",
+    "aws-sdk": "latest"
   },
   "devDependencies": {
     "supertest": "latest",
