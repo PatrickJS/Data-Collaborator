@@ -37,6 +37,10 @@ window.angular.module('pmd.controllers.collaborationPage', [])
 
             d3.select(self.frameElement).style("height", diameter + "px");
         };
+        var turnOnAnnotator = function(){
+            $('.add-person').annotator();
+        }
         bubbleData();
+        turnOnAnnotator();
     }
  ]);
